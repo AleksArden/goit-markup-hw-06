@@ -62,7 +62,7 @@
             Эффективные решения<br />
             для вашего бизнеса
           </h1>
-          <button class="hero-btn" type="button" data-modal-open>Заказать услугу</button>
+          <button class="hero-btn btn" type="button" data-modal-open>Заказать услугу</button>
         </div>
       </section>
       <!-- features -->
@@ -532,11 +532,35 @@
             </li>
           </ul>
         </div>
+        <div class="footer-form-field">
+          <p class="footer-social-text">Подпишитесь на рассылку</p>
+          <form class="footer-form" name="footer-form" autocomplete="off" novalidate>
+            <div class="footer-field">
+              <label class="visually-hidden" for="user-email">Ввести e-mail</label>
+              <input
+                class="footer-input"
+                id="user-email"
+                type="email"
+                name="user-email"
+                placeholder="E-mail"
+              />
+            </div>
+            <div class="footer-field">
+              <button class="footer-field-btn btn" type="submit">
+                <span>Подписаться</span>
+                <svg class="footer-form-icon" width="24" height="24" aria-hidden="true">
+                  <use href="./images/icons.svg#icon-send"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </footer>
     <!-- modal -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
+        <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
         <button class="btn-modal-close" type="button" data-modal-close>
           <svg
             class="icon-modal-close"
@@ -547,6 +571,30 @@
             <use href="./images/icons.svg#icon-modal-close"></use>
           </svg>
         </button>
+        <form class="form" name="main-form" autocomplete="off" novalidate>
+          <div class="modal-form-field">
+            <label class="modal-form-label" for="username">Имя</label>
+            <input class="modal-form-input" id="username" type="text" name="username" />
+          </div>
+          <div class="modal-form-field">
+            <label class="modal-form-label" for="tel">Телефон</label>
+            <input class="modal-form-input" id="tel" type="tel" name="tel" />
+          </div>
+          <div class="modal-form-field">
+            <label class="modal-form-label" for="mail">Почта</label>
+            <input class="modal-form-input" id="mail" type="email" name="mail" />
+          </div>
+          <div class="modal-form-field">
+            <label class="modal-form-label" for="comment">Комментарий</label>
+            <textarea
+              class="comment"
+              name="comment"
+              id="comment"
+              rows="5"
+              placeholder="Введите текст"
+            ></textarea>
+          </div>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>

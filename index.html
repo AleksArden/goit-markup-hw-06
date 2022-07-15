@@ -609,13 +609,18 @@
               placeholder="Введите текст"
             ></textarea>
           </div>
-          <div class="modal-form-terms">
-            <input id="terms" type="checkbox" name="checkbox" />
-            <label class="modal-form-terms-label" for="terms">
+          <div class="modal-form-checkbox">
+            <label class="label-checkbox">
+              <input class="input-checkbox visually-hidden" type="checkbox" name="checkbox" />
+              <span class="icon-border-checkbox"></span>
+              <svg class="icon-checkbox" width="15" height="15" aria-hidden="true">
+                <use href="./images/icons.svg#icon-check"></use>
+              </svg>
               <span>Соглашаюсь с рассылкой и принимаю</span>
-              <a class="form-terms-link" href="#">Условия договора</a>
+              <a class="link-checkbox" href="#">Условия договора</a>
             </label>
           </div>
+
           <button class="modal-form-btn btn" type="submit">Отправить</button>
         </form>
       </div>

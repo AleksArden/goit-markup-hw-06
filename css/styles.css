@@ -16,6 +16,12 @@
   --color-portfolio-overlay: rgba(33, 150, 243, 0.9);
   --modal-border: rgba(0, 0, 0, 0.1);
   --bg-backdrop: rgba(0, 0, 0, 0.2);
+  --color-placeholder-modal: rgba(117, 117, 117, 0.5);
+  --color-border-modal-input: rgba(33, 33, 33, 0.2);
+  --color-placeholder-footer: rgba(255, 255, 255, 0.6);
+  --color-border-footer-input: rgba(255, 255, 255, 0.3);
+  --time-duration: 250ms;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -80,7 +86,7 @@ img {
   border: 0 solid transparent;
   border-radius: 4px;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--time-duration) var(--timing-function);
 
   color: var(--color-text-background);
   background-color: var(--accent-color);
@@ -114,7 +120,7 @@ img {
 .header-logo {
   margin-right: 93px;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--time-duration) var(--timing-function);
 
   color: #000;
   font-family: 'Raleway';
@@ -151,7 +157,7 @@ img {
   display: block;
   padding: 32px 0;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--time-duration) var(--timing-function);
 
   color: var(--title-text-color);
 }
@@ -161,7 +167,7 @@ img {
   align-items: center;
   padding: 32px 0;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--time-duration) var(--timing-function);
 
   color: var(--primary-text-color);
 }
@@ -404,8 +410,8 @@ img {
   height: 100%;
   border-radius: 50%;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--time-duration) var(--timing-function),
+    background-color var(--time-duration) var(--timing-function);
 
   color: var(--fill-icons);
 }
@@ -446,8 +452,8 @@ img {
   border: 1px solid var(--fill-icons);
   border-radius: 4px;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--time-duration) var(--timing-function),
+    border-color var(--time-duration) var(--timing-function);
 
   color: var(--fill-icons);
 }
@@ -479,9 +485,9 @@ img {
   border: 0 solid transparent;
   border-radius: 4px;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--time-duration) var(--timing-function),
+    background-color var(--time-duration) var(--timing-function),
+    box-shadow var(--time-duration) var(--timing-function);
 
   color: var(--title-text-color);
   background-color: var(--color-background-third);
@@ -515,7 +521,7 @@ img {
 
 .projects-link {
   display: block;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow var(--time-duration) var(--timing-function);
 }
 
 .projects-link:hover,
@@ -538,7 +544,7 @@ img {
   height: 100%;
 
   transform: translateY(101%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--time-duration) var(--timing-function);
 
   background: var(--color-portfolio-overlay);
 }
@@ -594,7 +600,7 @@ img {
   display: inline-block;
   margin-bottom: 20px;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--time-duration) var(--timing-function);
 
   color: var(--color-text-background);
   font-family: 'Raleway';
@@ -617,7 +623,7 @@ img {
 }
 
 .footer-link {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--time-duration) var(--timing-function);
   color: var(--color-footer-link);
 }
 
@@ -649,8 +655,8 @@ img {
   height: 100%;
   border-radius: 50%;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--time-duration) var(--timing-function),
+    background-color var(--time-duration) var(--timing-function);
 
   color: var(--color-text-background);
   background-color: var(--footer-bg-icons);
@@ -681,11 +687,11 @@ img {
   width: 358px;
   height: 50px;
   border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--color-border-footer-input);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   outline: none;
 
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color var(--time-duration) var(--timing-function);
 
   font-weight: 400;
   font-size: 16px;
@@ -703,7 +709,7 @@ img {
 }
 
 .footer-input::placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--color-placeholder-footer);
 }
 
 .footer-field-btn {
@@ -725,8 +731,8 @@ img {
   height: 100%;
 
   opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity var(--time-duration) var(--timing-function),
+    visibility var(--time-duration) var(--timing-function);
 
   background-color: var(--bg-backdrop);
 }
@@ -738,11 +744,10 @@ img {
   width: 528px;
   height: 581px;
   border-radius: 4px;
-
   padding: 40px;
 
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--time-duration) var(--timing-function);
 
   background-color: var(--color-text-background);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -761,6 +766,7 @@ img {
 
 .modal-title {
   margin-bottom: 12px;
+
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 20px;
@@ -781,7 +787,7 @@ img {
   border: 1px solid var(--modal-border);
   border-radius: 50%;
 
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--time-duration) var(--timing-function);
 
   fill: var(--title-text-color);
   background-color: var(--color-text-background);
@@ -800,27 +806,31 @@ img {
 .modal-form-field:nth-child(4) {
   margin-bottom: 0;
 }
+
 .modal-form-label {
   display: block;
   margin-bottom: 4px;
+
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
 }
+
 .form-field {
   position: relative;
   width: 100%;
 }
+
 .modal-form-input {
   width: 100%;
   height: 40px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
+  border: 1px solid var(--color-border-modal-input);
   border-radius: 4px;
   padding: 11px 12px 11px 42px;
   outline: none;
 
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color var(--time-duration) var(--timing-function);
 
   color: var(--title-text-color);
   font-weight: 400;
@@ -839,10 +849,11 @@ img {
   left: 12px;
   transform: translateY(-50%);
 
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--time-duration) var(--timing-function);
 
   fill: var(--title-text-color);
 }
+
 .form-field:focus-within > .modal-form-icon {
   fill: var(--accent-color);
 }
@@ -851,12 +862,11 @@ img {
   width: 100%;
   height: 120px;
   padding: 12px 16px;
-
   resize: none;
 }
 
 .modal-comment::placeholder {
-  color: rgba(117, 117, 117, 0.5);
+  color: var(--color-placeholder-modal);
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
@@ -883,14 +893,14 @@ img {
 
 .checkbox {
   display: inline-flex;
-
   width: 16px;
   height: 15px;
   outline: 2px solid var(--title-text-color);
   outline-offset: -2px;
   border-radius: 2px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+  transition: background-color var(--time-duration) var(--timing-function),
+    outline var(--time-duration) var(--timing-function);
 }
 
 .input-checkbox:checked + .checkbox {
